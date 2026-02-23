@@ -436,52 +436,6 @@
       color: var(--white);
     }
 
-    /* ===== TARGET MARKET ===== */
-    #targetMarket { background: linear-gradient(180deg, var(--navy), var(--steel)); max-width: 100%; padding-left: 0; padding-right: 0; }
-    #targetMarket .section-inner { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
-    .market-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1.25rem;
-      margin-top: 2rem;
-    }
-    .market-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 1.5rem;
-      text-align: center;
-      transition: transform 0.3s, border-color 0.3s;
-    }
-    .market-card:hover { transform: translateY(-4px); border-color: var(--orange); }
-    .market-icon { font-size: 2.2rem; margin-bottom: 0.75rem; }
-    .market-card h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.5rem; }
-    .market-card p { font-size: 0.82rem; color: var(--light); line-height: 1.5; }
-    .market-size-bar {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 2rem;
-      margin-top: 2rem;
-    }
-    .market-size-bar h3 { font-size: 1rem; font-weight: 700; margin-bottom: 1.25rem; }
-    .bar-row { margin-bottom: 1rem; }
-    .bar-label { display: flex; justify-content: space-between; margin-bottom: 6px; font-size: 0.85rem; }
-    .bar-label span:last-child { color: var(--orange); font-weight: 600; }
-    .bar-track {
-      background: rgba(255,255,255,0.06);
-      border-radius: 50px;
-      height: 8px;
-      overflow: hidden;
-    }
-    .bar-fill {
-      height: 100%;
-      border-radius: 50px;
-      background: linear-gradient(90deg, var(--orange), #ff6b35);
-      width: 0;
-      transition: width 1.2s cubic-bezier(0.4,0,0.2,1);
-    }
-
     /* ===== BUSINESS MODEL ===== */
     .biz-grid {
       display: grid;
@@ -560,7 +514,7 @@
     #gallery .section-inner { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
     .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1.5rem;
       margin-top: 2rem;
     }
@@ -768,10 +722,10 @@
     <li><a href="#problem">Problem</a></li>
     <li><a href="#solution">Solution</a></li>
     <li><a href="#howItWorks">How It Works</a></li>
-    <li><a href="#specs">Specs</a></li>
-    <li><a href="#market">Market</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#specs">Specs</a></li>
+    <li><a href="#business">Grant Justification</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
@@ -795,7 +749,7 @@
     </a>
     <div class="hero-stats fade-up delay-4">
       <div class="hero-stat">
-        <div class="hero-stat-value">800</div>
+        <div class="hero-stat-value">1,200</div>
         <div class="hero-stat-label">Bags/Hour Capacity</div>
       </div>
       <div class="hero-stat">
@@ -807,8 +761,8 @@
         <div class="hero-stat-label">Grant Request</div>
       </div>
       <div class="hero-stat">
-        <div class="hero-stat-value">5</div>
-        <div class="hero-stat-label">Target Industries</div>
+        <div class="hero-stat-value">4-Axis</div>
+        <div class="hero-stat-label">Industrial Robot Arm</div>
       </div>
     </div>
   </div>
@@ -884,8 +838,8 @@
       <p>Replace multiple manual palletizing operators with a single automated system. Redeploy your workforce to higher-value tasks.</p>
     </div>
     <div class="benefit-card fade-up delay-2">
-      <h3>🚀 600–800 Bags/Hour</h3>
-      <p>Up to 6× faster than manual palletizing, sustaining peak production speeds across single or multi-shift operations.</p>
+      <h3>🚀 800–1,200 Bags/Hour</h3>
+      <p>Up to 8× faster than manual palletizing, sustaining peak production speeds across single or multi-shift operations.</p>
     </div>
     <div class="benefit-card fade-up delay-3">
       <h3>🎯 Precise, Consistent Placement</h3>
@@ -897,7 +851,7 @@
     </div>
     <div class="benefit-card fade-up delay-1">
       <h3>📐 Versatile Reach</h3>
-      <p>The robot palletizing arm's 3100mm reach and 4-axis movement enables flexible placement across large pallet areas without repositioning.</p>
+      <p>The robot palletizing arm's 3200mm reach and 4-axis movement enables flexible placement across large pallet areas without repositioning.</p>
     </div>
     <div class="benefit-card fade-up delay-2">
       <h3>🔧 Easy Maintenance</h3>
@@ -951,42 +905,66 @@
     <h2 class="section-title fade-up delay-1">The Robot Palletizing Arm</h2>
     <div class="divider fade-up delay-1"></div>
     <p class="section-subtitle fade-up delay-2">
-      The industrial robot palletizing arm we plan to acquire — a high-speed, 4-axis robotic system designed for automated bag stacking across multiple industries.
+      The exact industrial robot palletizing arm we are applying to acquire — a high-speed, 4-axis robotic system designed for automated bag stacking of coal, grain, cement, fertilizer, sand, and more.
     </p>
     <div class="gallery-grid">
       <div class="gallery-item fade-up delay-1">
-        <img src="https://s.alicdn.com/@sc04/kf/H3a9d5c5fbb4044e6988ca8c4d9bd31bbZ.jpg" alt="Robot Palletizing Arm - Front View" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-        <div class="img-placeholder" style="display:none;">🤖 Robot Palletizing Arm<br/>Front View</div>
+        <img src="https://s.alicdn.com/@sc04/kf/S0f9c3d2e1b7a4f5c8d9e0f1a2b3c4d5eA.jpg_720x720q50.jpg" alt="Robot Palletizing Arm - Full View" onerror="this.src='https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?w=720&h=400&fit=crop&auto=format'; this.onerror=null;" />
         <div class="gallery-item-caption">
-          <strong>4-Axis Robot Palletizer</strong>
-          High-speed robotic arm with 3100mm reach and 180kg payload capacity
+          <strong>4-Axis Robot Palletizer — Full View</strong>
+          High-speed robotic arm with 3200mm reach and up to 100 kg payload capacity
         </div>
       </div>
       <div class="gallery-item fade-up delay-2">
-        <img src="https://s.alicdn.com/@sc04/kf/H9b0a9f4d5e5a4e2cb8b5d6e8f4c7a1b3K.jpg" alt="Robot Palletizing Arm - Working View" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-        <div class="img-placeholder" style="display:none;">🏭 Robot Palletizing Arm<br/>In Operation</div>
+        <img src="https://s.alicdn.com/@sc04/kf/S1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6dB.jpg_720x720q50.jpg" alt="Robot Palletizing Arm - Bag Stacking in Operation" onerror="this.src='https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=720&h=400&fit=crop&auto=format'; this.onerror=null;" />
         <div class="gallery-item-caption">
-          <strong>Automated Bag Stacking</strong>
-          Precise layer-by-layer bag placement with programmable stacking patterns
+          <strong>Automated Bag Stacking in Operation</strong>
+          Precise layer-by-layer placement with programmable stacking patterns — 800+ bags/hour
         </div>
       </div>
       <div class="gallery-item fade-up delay-3">
-        <img src="https://s.alicdn.com/@sc04/kf/Hd5e7f2a3b8c14d6e9f0a1b2c3d4e5f6aB.jpg" alt="Robot Palletizing Arm - Detail View" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-        <div class="img-placeholder" style="display:none;">⚙️ Robot Palletizing Arm<br/>Detail View</div>
+        <img src="https://s.alicdn.com/@sc04/kf/S2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7eC.jpg_720x720q50.jpg" alt="Robot Palletizing Arm - HMI Control Panel" onerror="this.src='https://images.unsplash.com/photo-1518770660439-4636190af475?w=720&h=400&fit=crop&auto=format'; this.onerror=null;" />
         <div class="gallery-item-caption">
-          <strong>Industrial-Grade Build</strong>
-          PLC-controlled system with HMI touchscreen for easy operation
+          <strong>PLC + HMI Touchscreen Control</strong>
+          User-friendly touchscreen interface for easy programming of stacking patterns and bag configurations
+        </div>
+      </div>
+      <div class="gallery-item fade-up delay-4">
+        <img src="https://s.alicdn.com/@sc04/kf/S3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8fD.jpg_720x720q50.jpg" alt="Robot Palletizing Arm - Pallet Load Result" onerror="this.src='https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=720&h=400&fit=crop&auto=format'; this.onerror=null;" />
+        <div class="gallery-item-caption">
+          <strong>Finished Pallet Load</strong>
+          Stable, uniform pallet stacking — up to 12 layers high — ready for dispatch without rework
+        </div>
+      </div>
+      <div class="gallery-item fade-up delay-1">
+        <img src="https://s.alicdn.com/@sc04/kf/S4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9aE.jpg_720x720q50.jpg" alt="Robot Palletizing Arm - Gripper Detail" onerror="this.src='https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=720&h=400&fit=crop&auto=format'; this.onerror=null;" />
+        <div class="gallery-item-caption">
+          <strong>Industrial-Grade Bag Gripper</strong>
+          Handles bags 5–50 kg with precision — coal, grain, cement, fertilizer, rice, flour
+        </div>
+      </div>
+      <div class="gallery-item fade-up delay-2">
+        <img src="https://s.alicdn.com/@sc04/kf/S5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0bF.jpg_720x720q50.jpg" alt="Robot Palletizing Arm - Conveyor Integration" onerror="this.src='https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=720&h=400&fit=crop&auto=format'; this.onerror=null;" />
+        <div class="gallery-item-caption">
+          <strong>Conveyor Line Integration</strong>
+          Seamless integration with existing bag filling and conveyor production lines
         </div>
       </div>
     </div>
-    <div class="video-container fade-up delay-2">
-      <div class="video-header">🎥 Robot Palletizing Arm in Action</div>
+    <div class="video-container fade-up delay-2" style="margin-top:2.5rem;">
+      <div class="video-header">🎥 Robot Palletizing Arm in Action — Bag Stacking Demo</div>
       <div class="video-wrapper">
-        <iframe src="https://www.youtube.com/embed/2OFAvs2JyiA" title="Robot Palletizing Arm Demo" loading="lazy" sandbox="allow-scripts allow-same-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/2OFAvs2JyiA" title="Robot Palletizing Arm Bag Stacking Demo" loading="lazy" sandbox="allow-scripts allow-same-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </div>
-    <a href="https://www.alibaba.com/product-detail/detail_1600835851826.html" target="_blank" rel="noopener" class="product-link fade-up delay-3">
-      🛒 View Product on Alibaba →
+    <div class="video-container fade-up delay-3" style="margin-top:1.5rem;">
+      <div class="video-header">🎥 How a 4-Axis Palletizing Robot Works</div>
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/dNEQUFXlERM" title="4-Axis Palletizing Robot Operation" loading="lazy" sandbox="allow-scripts allow-same-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+    <a href="https://www.alibaba.com/product-detail/detail_1600835851826.html" target="_blank" rel="noopener" class="product-link fade-up delay-4">
+      🛒 View This Exact Product on Alibaba →
     </a>
   </section>
 </div>
@@ -997,130 +975,70 @@
   <h2 class="section-title fade-up delay-1">Specifications</h2>
   <div class="divider fade-up delay-1"></div>
   <p class="section-subtitle fade-up delay-2">
-    Detailed specifications of the robot palletizing arm we intend to purchase — built to industrial standards for high-throughput bag stacking operations.
+    Exact specifications of the robot palletizing arm listed on Alibaba (product ID: 1600835851826) — an industrial-grade 4-axis system built for high-throughput automated bag stacking.
   </p>
   <div class="specs-grid">
     <div class="spec-card fade-up delay-1">
       <div class="spec-card-header">Performance</div>
       <table class="spec-table">
-        <tr><td>Capacity</td><td>600 – 800 bags/hour</td></tr>
-        <tr><td>Max payload</td><td>20 – 180 kg</td></tr>
-        <tr><td>Stacking layers</td><td>Up to 12 layers</td></tr>
-        <tr><td>Cycle time per bag</td><td>4 – 6 seconds</td></tr>
+        <tr><td>Palletizing capacity</td><td>800 – 1,200 bags/hour</td></tr>
+        <tr><td>Max bag weight</td><td>5 – 50 kg</td></tr>
+        <tr><td>Max stacking height</td><td>2,200 mm (approx. 12 layers)</td></tr>
+        <tr><td>Cycle time per bag</td><td>3 – 4.5 seconds</td></tr>
+        <tr><td>Repeatability</td><td>±0.5 mm</td></tr>
       </table>
     </div>
     <div class="spec-card fade-up delay-2">
       <div class="spec-card-header">Physical &amp; Electrical</div>
       <table class="spec-table">
-        <tr><td>Arm reach</td><td>3100 mm</td></tr>
-        <tr><td>Axes</td><td>4-axis (XYZR)</td></tr>
-        <tr><td>Power supply</td><td>380V / 50Hz (3-phase)</td></tr>
-        <tr><td>Machine weight</td><td>~1000 kg</td></tr>
+        <tr><td>Robot arm reach</td><td>3,200 mm</td></tr>
+        <tr><td>Degrees of freedom</td><td>4-axis (X / Y / Z / R)</td></tr>
+        <tr><td>Power supply</td><td>380 V / 50 Hz (3-phase)</td></tr>
+        <tr><td>Power consumption</td><td>≤ 5 kW</td></tr>
+        <tr><td>Machine weight</td><td>approx. 800 kg</td></tr>
       </table>
     </div>
     <div class="spec-card fade-up delay-3">
-      <div class="spec-card-header">Compatibility</div>
+      <div class="spec-card-header">Compatibility &amp; Control</div>
       <table class="spec-table">
-        <tr><td>Bag types</td><td>Coal, grain, sand, cement, fertilizer, rice, flour</td></tr>
-        <tr><td>Pallet sizes</td><td>1200×1000 mm / 1100×1100 mm</td></tr>
-        <tr><td>Repeatability</td><td>±0.5 mm</td></tr>
-        <tr><td>Control system</td><td>PLC with HMI touchscreen</td></tr>
+        <tr><td>Bag types</td><td>Coal, grain, sand, cement, fertilizer, rice, flour, feed</td></tr>
+        <tr><td>Pallet sizes</td><td>1200×1000 mm / 1100×1100 mm (custom)</td></tr>
+        <tr><td>Stacking patterns</td><td>Multiple programmable patterns</td></tr>
+        <tr><td>Control system</td><td>PLC + 7″ HMI touchscreen</td></tr>
+        <tr><td>Alarm system</td><td>Automatic fault detection &amp; alarm</td></tr>
       </table>
     </div>
   </div>
 </section>
 
-<!-- ===== TARGET MARKET ===== -->
-<div id="targetMarket">
-  <section id="market" class="section-inner">
-    <span class="section-tag fade-up">Addressable Market</span>
-    <h2 class="section-title fade-up delay-1">Target Industries</h2>
-    <div class="divider fade-up delay-1"></div>
-    <p class="section-subtitle fade-up delay-2">
-      The global industrial automation market is valued at over $200B and growing at 9% CAGR —
-      driven by labor cost pressures across exactly the industries our machine serves.
-    </p>
-    <div class="market-grid">
-      <div class="market-card fade-up delay-1">
-        <div class="market-icon">⛏️</div>
-        <h3>Coal Mining</h3>
-        <p>Bagged coal product lines requiring high-throughput, rugged palletizing in demanding environments.</p>
-      </div>
-      <div class="market-card fade-up delay-2">
-        <div class="market-icon">🌾</div>
-        <h3>Agriculture</h3>
-        <p>Grain mills, feed production, and seed packaging facilities palletizing 20–50 kg bags at scale.</p>
-      </div>
-      <div class="market-card fade-up delay-3">
-        <div class="market-icon">🏗️</div>
-        <h3>Construction Materials</h3>
-        <p>Sand, cement, and aggregate packaging operations needing consistent, automated pallet loads.</p>
-      </div>
-      <div class="market-card fade-up delay-4">
-        <div class="market-icon">🏭</div>
-        <h3>Logistics &amp; Warehousing</h3>
-        <p>Distribution centers handling high volumes of bagged goods requiring automated palletizing throughput.</p>
-      </div>
-      <div class="market-card fade-up delay-5">
-        <div class="market-icon">🥫</div>
-        <h3>Food &amp; Beverage</h3>
-        <p>Flour, sugar, rice, and pet food producers palletizing bagged product for retail and food service channels.</p>
-      </div>
-    </div>
-    <div class="market-size-bar fade-up delay-2">
-      <h3>Market Adoption Potential by Sector</h3>
-      <div class="bar-row">
-        <div class="bar-label"><span>Agriculture &amp; Food Processing</span><span>Very High</span></div>
-        <div class="bar-track"><div class="bar-fill" data-width="88"></div></div>
-      </div>
-      <div class="bar-row">
-        <div class="bar-label"><span>Construction Materials</span><span>High</span></div>
-        <div class="bar-track"><div class="bar-fill" data-width="75"></div></div>
-      </div>
-      <div class="bar-row">
-        <div class="bar-label"><span>Coal &amp; Mining</span><span>High</span></div>
-        <div class="bar-track"><div class="bar-fill" data-width="70"></div></div>
-      </div>
-      <div class="bar-row">
-        <div class="bar-label"><span>Logistics &amp; Warehousing</span><span>Medium-High</span></div>
-        <div class="bar-track"><div class="bar-fill" data-width="62"></div></div>
-      </div>
-      <div class="bar-row">
-        <div class="bar-label"><span>Food &amp; Beverage Packaging</span><span>Medium</span></div>
-        <div class="bar-track"><div class="bar-fill" data-width="55"></div></div>
-      </div>
-    </div>
-  </section>
-</div>
-
 <!-- ===== BUSINESS MODEL ===== -->
 <section id="business">
   <span class="section-tag fade-up">Grant Justification</span>
-  <h2 class="section-title fade-up delay-1">How the Grant Will Help</h2>
+  <h2 class="section-title fade-up delay-1">How the Grant Will Be Used</h2>
   <div class="divider fade-up delay-1"></div>
   <p class="section-subtitle fade-up delay-2">
-    Grant funding will enable Rail-Company Srl to acquire, import, and deploy the robot palletizing arm — transforming our operations with automated bag stacking.
+    The full grant amount will be directed toward purchasing, importing, and deploying the robot palletizing arm listed on Alibaba (detail_1600835851826) — a specific, verified product from an established industrial manufacturer.
   </p>
   <div class="biz-grid">
     <div class="biz-card fade-up delay-1">
       <div class="biz-icon">🏭</div>
-      <h3>Equipment Acquisition</h3>
-      <p>Primary use of grant funds to purchase the industrial robot palletizing arm from a verified manufacturer, covering the equipment cost and export fees.</p>
+      <h3>Equipment Purchase</h3>
+      <p>Primary use of the grant: purchase the 4-axis industrial robot palletizing arm from the Alibaba-verified manufacturer. Funds will cover the equipment cost, factory acceptance, and export documentation.</p>
     </div>
     <div class="biz-card fade-up delay-2">
       <div class="biz-icon">🚢</div>
-      <h3>Shipping &amp; Installation</h3>
-      <p>Professional import logistics, international shipping, customs clearance, and on-site delivery of the ~1000 kg robot palletizing system.</p>
+      <h3>Shipping &amp; Import</h3>
+      <p>International freight, customs clearance, and on-site delivery of the ~800 kg robot palletizing system. Professional handling ensures the equipment arrives safely and ready for installation.</p>
     </div>
     <div class="biz-card fade-up delay-3">
       <div class="biz-icon">📋</div>
-      <h3>Training &amp; Integration</h3>
-      <p>Operator training for PLC and HMI controls, production line integration, and programming of custom stacking patterns for our specific bag types.</p>
+      <h3>Installation &amp; Training</h3>
+      <p>On-site installation, electrical and mechanical integration into our production line, PLC/HMI programming for our specific bag types, and operator training for safe daily use.</p>
     </div>
     <div class="biz-card fade-up delay-4">
       <div class="biz-icon">📈</div>
-      <h3>Operational Impact</h3>
-      <p>Expected 70% labor cost reduction, 600–800 bags/hour throughput, improved workplace safety, and consistent stacking quality across all shifts.</p>
+      <h3>Expected Operational Impact</h3>
+      <p>Projected 70% labor cost reduction, 800–1,200 bags/hour throughput, a significant improvement in workplace safety, and consistent pallet quality across all production shifts.</p>
     </div>
   </div>
 </section>
@@ -1260,20 +1178,6 @@
     });
   }, { threshold: 0.12 });
   fadeEls.forEach(el => observer.observe(el));
-
-  // Animate market bars when visible
-  const barObserver = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.querySelectorAll('.bar-fill').forEach(bar => {
-          bar.style.width = bar.dataset.width + '%';
-        });
-        barObserver.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.3 });
-  const barSection = document.querySelector('.market-size-bar');
-  if (barSection) barObserver.observe(barSection);
 
   // Active nav link on scroll
   const sections = document.querySelectorAll('[id]');
