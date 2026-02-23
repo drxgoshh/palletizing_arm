@@ -1,6 +1,6 @@
-# Palletizing Arm — Investor Pitch Website
+# Palletizing Arm — Grant Application Website
 
-A professional, single-page investor pitch website for **Rail-Company Srl**'s automated bag palletizing machine concept.
+A professional, single-page grant application website for **Rail-Company Srl**'s robot palletizing arm equipment acquisition.
 
 ## 🌐 Live Website
 
@@ -8,20 +8,20 @@ A professional, single-page investor pitch website for **Rail-Company Srl**'s au
 
 ## 📋 About
 
-This website serves as a scroll-based investor presentation for Rail-Company Srl's **Column Palletizer Machine** — an automated solution for stacking bags (coal, grain, sand, cement, fertilizer, etc.) onto pallets.
+This website serves as a scroll-based grant application for Rail-Company Srl's **Robot Palletizing Arm** — an industrial robot for automated stacking of bags (coal, grain, sand, cement, fertilizer, etc.) onto pallets.
 
 ### Sections
 
 1. **Hero** — Overview, key stats, call-to-action
 2. **The Problem** — Manual palletizing pain points and industry statistics
-3. **Our Solution** — Column palletizer benefits and key features
+3. **Our Solution** — Robot palletizing arm benefits and key features
 4. **How It Works** — Step-by-step process explanation
-5. **Technical Specifications** — Capacity, power, compatibility
-6. **Target Market** — Five key industries and market size
-7. **Business Model** — Revenue streams and competitive positioning
-8. **Roadmap** — Q1 2026 → Q1 2027 development timeline
-9. **Investment Opportunity** — $20,000 USD funding ask, use of funds, expected ROI
-10. **Contact** — Investor enquiry form
+5. **Product Gallery** — Images and video of the robot palletizing arm
+6. **Technical Specifications** — Capacity, power, compatibility
+7. **Target Market** — Five key industries and market size
+8. **Grant Justification** — How the grant will help acquire and deploy the equipment
+9. **Roadmap** — Q1 2026 → Q1 2027 equipment acquisition timeline
+10. **Contact** — General enquiry form
 
 ## 🛠️ Technical Details
 

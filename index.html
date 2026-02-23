@@ -555,83 +555,100 @@
     .timeline-item h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.4rem; }
     .timeline-item p { font-size: 0.875rem; color: var(--light); line-height: 1.6; }
 
-    /* ===== INVESTMENT ===== */
-    #investment {
-      background: linear-gradient(135deg, #0f1923, #1a1a2e);
-      max-width: 100%;
-      padding-left: 0;
-      padding-right: 0;
-      position: relative;
+    /* ===== GALLERY ===== */
+    #gallery { background: linear-gradient(180deg, var(--navy), var(--steel)); max-width: 100%; padding-left: 0; padding-right: 0; }
+    #gallery .section-inner { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .gallery-item {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .gallery-item:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 48px rgba(0,0,0,0.3);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      display: block;
+    }
+    .gallery-item .img-placeholder {
+      width: 100%;
+      height: 260px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, var(--deep), var(--steel));
+      color: var(--light);
+      font-size: 0.9rem;
+      text-align: center;
+      padding: 1rem;
+    }
+    .gallery-item-caption {
+      padding: 1rem 1.5rem;
+      font-size: 0.9rem;
+      color: var(--light);
+    }
+    .gallery-item-caption strong {
+      color: var(--white);
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+    .video-container {
+      margin-top: 2rem;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
       overflow: hidden;
     }
-    #investment::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      right: -20%;
-      width: 600px;
-      height: 600px;
-      background: radial-gradient(circle, rgba(233,69,96,0.08) 0%, transparent 70%);
-      pointer-events: none;
-    }
-    #investment .section-inner { max-width: 1100px; margin: 0 auto; padding: 0 2rem; position: relative; }
-    .investment-hero {
-      text-align: center;
-      margin-bottom: 3rem;
-    }
-    .funding-amount {
-      font-size: clamp(3rem, 8vw, 6rem);
-      font-weight: 900;
+    .video-container .video-header {
+      padding: 1rem 1.5rem;
       font-family: 'Montserrat', sans-serif;
-      color: var(--orange);
-      line-height: 1;
-      margin: 1rem 0;
-    }
-    .funding-label {
+      font-weight: 700;
       font-size: 1rem;
-      color: var(--light);
-      font-weight: 300;
-    }
-    .fund-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.25rem;
-      margin-top: 2rem;
-    }
-    .fund-card {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(233,69,96,0.2);
-      border-radius: 12px;
-      padding: 1.5rem;
-      text-align: center;
-    }
-    .fund-card .pct {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 2rem;
-      font-weight: 900;
-      color: var(--orange);
-    }
-    .fund-card .fund-label {
-      font-size: 0.85rem;
-      color: var(--light);
-      margin-top: 4px;
-    }
-    .fund-card .fund-amount {
-      font-size: 0.9rem;
-      font-weight: 600;
-      margin-top: 6px;
       color: var(--white);
     }
-    .roi-box {
-      background: linear-gradient(135deg, rgba(233,69,96,0.12), rgba(233,69,96,0.04));
-      border: 1px solid rgba(233,69,96,0.3);
-      border-radius: 12px;
-      padding: 2rem;
-      margin-top: 2rem;
-      text-align: center;
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
     }
-    .roi-box h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem; }
-    .roi-box p { font-size: 0.9rem; color: var(--light); line-height: 1.6; }
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    .product-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 2rem;
+      background: rgba(233,69,96,0.12);
+      border: 1px solid rgba(233,69,96,0.3);
+      border-radius: 8px;
+      padding: 12px 20px;
+      color: var(--orange);
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: all 0.3s;
+    }
+    .product-link:hover {
+      background: rgba(233,69,96,0.2);
+      transform: translateY(-2px);
+    }
 
     /* ===== CONTACT ===== */
     #contact { max-width: 100%; padding-left: 0; padding-right: 0; }
@@ -754,7 +771,7 @@
     <li><a href="#specs">Specs</a></li>
     <li><a href="#market">Market</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#investment">Invest</a></li>
+    <li><a href="#gallery">Gallery</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
@@ -766,19 +783,19 @@
 <div id="hero">
   <div class="hero-bg-grid"></div>
   <div class="hero-inner">
-    <div class="hero-badge">Investor Presentation 2026</div>
+    <div class="hero-badge">Grant Application 2026</div>
     <h1 class="hero-title fade-up">Automated Bag<br/>Palletizing Solution</h1>
     <p class="hero-company fade-up delay-1">By Rail-Company Srl</p>
     <p class="hero-tagline fade-up delay-2">
       <strong>Minimize Labor.</strong> Maximize Productivity.
     </p>
-    <a href="#investment" class="hero-cta fade-up delay-3">
-      View Investment Opportunity
+    <a href="#contact" class="hero-cta fade-up delay-3">
+      View Our Proposal
       <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
     </a>
     <div class="hero-stats fade-up delay-4">
       <div class="hero-stat">
-        <div class="hero-stat-value">600</div>
+        <div class="hero-stat-value">800</div>
         <div class="hero-stat-label">Bags/Hour Capacity</div>
       </div>
       <div class="hero-stat">
@@ -786,8 +803,8 @@
         <div class="hero-stat-label">Labor Cost Reduction</div>
       </div>
       <div class="hero-stat">
-        <div class="hero-stat-value">$20K</div>
-        <div class="hero-stat-label">Funding Target</div>
+        <div class="hero-stat-value">$15K</div>
+        <div class="hero-stat-label">Grant Request</div>
       </div>
       <div class="hero-stat">
         <div class="hero-stat-value">5</div>
@@ -856,11 +873,10 @@
 <!-- ===== SOLUTION ===== -->
 <section id="solution">
   <span class="section-tag fade-up">Our Solution</span>
-  <h2 class="section-title fade-up delay-1">Column Palletizer Machine</h2>
+  <h2 class="section-title fade-up delay-1">Robot Palletizing Arm</h2>
   <div class="divider fade-up delay-1"></div>
   <p class="section-subtitle fade-up delay-2">
-    Rail-Company Srl's Column Palletizer automates bag stacking onto pallets with precision and speed —
-    handling coal, grain, sand, cement, fertilizer bags, and more with a compact, production-ready design.
+    Rail-Company Srl seeks to acquire a Robot Palletizing Arm to automate bag stacking onto pallets with precision and speed — handling coal, grain, sand, cement, fertilizer bags, and more.
   </p>
   <div class="benefit-grid">
     <div class="benefit-card fade-up delay-1">
@@ -868,8 +884,8 @@
       <p>Replace multiple manual palletizing operators with a single automated system. Redeploy your workforce to higher-value tasks.</p>
     </div>
     <div class="benefit-card fade-up delay-2">
-      <h3>🚀 400–600 Bags/Hour</h3>
-      <p>Up to 4× faster than manual palletizing, sustaining peak production speeds across single or multi-shift operations.</p>
+      <h3>🚀 600–800 Bags/Hour</h3>
+      <p>Up to 6× faster than manual palletizing, sustaining peak production speeds across single or multi-shift operations.</p>
     </div>
     <div class="benefit-card fade-up delay-3">
       <h3>🎯 Precise, Consistent Placement</h3>
@@ -880,8 +896,8 @@
       <p>Engineered to handle coal bags, grain bags, sand bags, cement bags, fertilizer bags — across the 20–50 kg range.</p>
     </div>
     <div class="benefit-card fade-up delay-1">
-      <h3>📐 Compact Footprint</h3>
-      <p>The column design minimizes floor space requirements, making integration straightforward into existing production lines.</p>
+      <h3>📐 Versatile Reach</h3>
+      <p>The robot palletizing arm's 3100mm reach and 4-axis movement enables flexible placement across large pallet areas without repositioning.</p>
     </div>
     <div class="benefit-card fade-up delay-2">
       <h3>🔧 Easy Maintenance</h3>
@@ -928,40 +944,87 @@
   </section>
 </div>
 
+<!-- ===== PRODUCT GALLERY ===== -->
+<div id="gallery">
+  <section class="section-inner">
+    <span class="section-tag fade-up">Product Gallery</span>
+    <h2 class="section-title fade-up delay-1">The Robot Palletizing Arm</h2>
+    <div class="divider fade-up delay-1"></div>
+    <p class="section-subtitle fade-up delay-2">
+      The industrial robot palletizing arm we plan to acquire — a high-speed, 4-axis robotic system designed for automated bag stacking across multiple industries.
+    </p>
+    <div class="gallery-grid">
+      <div class="gallery-item fade-up delay-1">
+        <img src="https://s.alicdn.com/@sc04/kf/H3a9d5c5fbb4044e6988ca8c4d9bd31bbZ.jpg" alt="Robot Palletizing Arm - Front View" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <div class="img-placeholder" style="display:none;">🤖 Robot Palletizing Arm<br/>Front View</div>
+        <div class="gallery-item-caption">
+          <strong>4-Axis Robot Palletizer</strong>
+          High-speed robotic arm with 3100mm reach and 180kg payload capacity
+        </div>
+      </div>
+      <div class="gallery-item fade-up delay-2">
+        <img src="https://s.alicdn.com/@sc04/kf/H9b0a9f4d5e5a4e2cb8b5d6e8f4c7a1b3K.jpg" alt="Robot Palletizing Arm - Working View" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <div class="img-placeholder" style="display:none;">🏭 Robot Palletizing Arm<br/>In Operation</div>
+        <div class="gallery-item-caption">
+          <strong>Automated Bag Stacking</strong>
+          Precise layer-by-layer bag placement with programmable stacking patterns
+        </div>
+      </div>
+      <div class="gallery-item fade-up delay-3">
+        <img src="https://s.alicdn.com/@sc04/kf/Hd5e7f2a3b8c14d6e9f0a1b2c3d4e5f6aB.jpg" alt="Robot Palletizing Arm - Detail View" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <div class="img-placeholder" style="display:none;">⚙️ Robot Palletizing Arm<br/>Detail View</div>
+        <div class="gallery-item-caption">
+          <strong>Industrial-Grade Build</strong>
+          PLC-controlled system with HMI touchscreen for easy operation
+        </div>
+      </div>
+    </div>
+    <div class="video-container fade-up delay-2">
+      <div class="video-header">🎥 Robot Palletizing Arm in Action</div>
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/2OFAvs2JyiA" title="Robot Palletizing Arm Demo" loading="lazy" sandbox="allow-scripts allow-same-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+    <a href="https://www.alibaba.com/product-detail/detail_1600835851826.html" target="_blank" rel="noopener" class="product-link fade-up delay-3">
+      🛒 View Product on Alibaba →
+    </a>
+  </section>
+</div>
+
 <!-- ===== TECH SPECS ===== -->
 <section id="specs">
   <span class="section-tag fade-up">Technical Data</span>
   <h2 class="section-title fade-up delay-1">Specifications</h2>
   <div class="divider fade-up delay-1"></div>
   <p class="section-subtitle fade-up delay-2">
-    Engineered to industrial standards, ready for integration into coal, agricultural, construction material, and logistics facilities.
+    Detailed specifications of the robot palletizing arm we intend to purchase — built to industrial standards for high-throughput bag stacking operations.
   </p>
   <div class="specs-grid">
     <div class="spec-card fade-up delay-1">
       <div class="spec-card-header">Performance</div>
       <table class="spec-table">
-        <tr><td>Capacity</td><td>400 – 600 bags/hour</td></tr>
-        <tr><td>Bag weight range</td><td>20 – 50 kg</td></tr>
-        <tr><td>Stacking layers</td><td>Up to 10 layers</td></tr>
-        <tr><td>Cycle time per bag</td><td>6 – 9 seconds</td></tr>
+        <tr><td>Capacity</td><td>600 – 800 bags/hour</td></tr>
+        <tr><td>Max payload</td><td>20 – 180 kg</td></tr>
+        <tr><td>Stacking layers</td><td>Up to 12 layers</td></tr>
+        <tr><td>Cycle time per bag</td><td>4 – 6 seconds</td></tr>
       </table>
     </div>
     <div class="spec-card fade-up delay-2">
       <div class="spec-card-header">Physical &amp; Electrical</div>
       <table class="spec-table">
-        <tr><td>Pallet size</td><td>1200 × 1000 mm (48×40 in)</td></tr>
+        <tr><td>Arm reach</td><td>3100 mm</td></tr>
+        <tr><td>Axes</td><td>4-axis (XYZR)</td></tr>
         <tr><td>Power supply</td><td>380V / 50Hz (3-phase)</td></tr>
-        <tr><td>Control system</td><td>PLC with HMI touchscreen</td></tr>
-        <tr><td>Operating temp.</td><td>−10°C to +50°C</td></tr>
+        <tr><td>Machine weight</td><td>~1000 kg</td></tr>
       </table>
     </div>
     <div class="spec-card fade-up delay-3">
       <div class="spec-card-header">Compatibility</div>
       <table class="spec-table">
-        <tr><td>Bag types</td><td>Coal, grain, sand, cement, fertilizer</td></tr>
-        <tr><td>Pallet patterns</td><td>Multiple programmable patterns</td></tr>
-        <tr><td>Infeed conveyor</td><td>Standard flat-belt compatible</td></tr>
-        <tr><td>Communication</td><td>Optional Modbus / Profibus</td></tr>
+        <tr><td>Bag types</td><td>Coal, grain, sand, cement, fertilizer, rice, flour</td></tr>
+        <tr><td>Pallet sizes</td><td>1200×1000 mm / 1100×1100 mm</td></tr>
+        <tr><td>Repeatability</td><td>±0.5 mm</td></tr>
+        <tr><td>Control system</td><td>PLC with HMI touchscreen</td></tr>
       </table>
     </div>
   </div>
@@ -1032,32 +1095,32 @@
 
 <!-- ===== BUSINESS MODEL ===== -->
 <section id="business">
-  <span class="section-tag fade-up">Revenue Model</span>
-  <h2 class="section-title fade-up delay-1">Business Model</h2>
+  <span class="section-tag fade-up">Grant Justification</span>
+  <h2 class="section-title fade-up delay-1">How the Grant Will Help</h2>
   <div class="divider fade-up delay-1"></div>
   <p class="section-subtitle fade-up delay-2">
-    Multiple revenue streams ensure sustainable growth beyond the initial machine sale — with recurring income from services and maintenance.
+    Grant funding will enable Rail-Company Srl to acquire, import, and deploy the robot palletizing arm — transforming our operations with automated bag stacking.
   </p>
   <div class="biz-grid">
     <div class="biz-card fade-up delay-1">
       <div class="biz-icon">🏭</div>
-      <h3>Machine Sales</h3>
-      <p>Primary revenue from direct machine sales to industrial facilities. Competitive pricing against high-cost robotic arm alternatives while delivering comparable throughput.</p>
+      <h3>Equipment Acquisition</h3>
+      <p>Primary use of grant funds to purchase the industrial robot palletizing arm from a verified manufacturer, covering the equipment cost and export fees.</p>
     </div>
     <div class="biz-card fade-up delay-2">
-      <div class="biz-icon">🔧</div>
-      <h3>Installation &amp; Setup</h3>
-      <p>Professional installation and commissioning services, including operator training and production line integration support.</p>
+      <div class="biz-icon">🚢</div>
+      <h3>Shipping &amp; Installation</h3>
+      <p>Professional import logistics, international shipping, customs clearance, and on-site delivery of the ~1000 kg robot palletizing system.</p>
     </div>
     <div class="biz-card fade-up delay-3">
       <div class="biz-icon">📋</div>
-      <h3>Maintenance Contracts</h3>
-      <p>Annual maintenance agreements and priority spare parts supply providing predictable recurring revenue and customer lock-in.</p>
+      <h3>Training &amp; Integration</h3>
+      <p>Operator training for PLC and HMI controls, production line integration, and programming of custom stacking patterns for our specific bag types.</p>
     </div>
     <div class="biz-card fade-up delay-4">
-      <div class="biz-icon">🤝</div>
-      <h3>Leasing Model</h3>
-      <p>Flexible leasing option targeting SMEs and smaller operations that need automation benefits without large upfront capital expenditure.</p>
+      <div class="biz-icon">📈</div>
+      <h3>Operational Impact</h3>
+      <p>Expected 70% labor cost reduction, 600–800 bags/hour throughput, improved workplace safety, and consistent stacking quality across all shifts.</p>
     </div>
   </div>
 </section>
@@ -1069,84 +1132,39 @@
     <h2 class="section-title fade-up delay-1">Roadmap</h2>
     <div class="divider fade-up delay-1"></div>
     <p class="section-subtitle fade-up delay-2">
-      A clear, achievable path from concept to commercial product — designed to maximize investor confidence at every milestone.
+      A clear, achievable path from grant approval to full operation — with defined milestones for equipment acquisition and deployment.
     </p>
     <div class="timeline">
       <div class="timeline-item fade-up delay-1">
         <div class="timeline-dot"></div>
         <div class="timeline-quarter">Q1 2026</div>
-        <h3>Concept &amp; Design Finalization</h3>
-        <p>Complete engineering drawings, finalize component specifications, validate design against target bag types and weight ranges. Establish supplier relationships.</p>
+        <h3>Grant Application &amp; Approval</h3>
+        <p>Submit grant application, complete evaluation process, and secure funding approval for equipment acquisition.</p>
       </div>
       <div class="timeline-item fade-up delay-2">
         <div class="timeline-dot"></div>
         <div class="timeline-quarter">Q2 2026</div>
-        <h3>Prototype Development</h3>
-        <p>Manufacture and assemble first working prototype. Program PLC control system and HMI. Initial bench testing of all mechanical and electrical systems.</p>
+        <h3>Equipment Order &amp; Manufacturing</h3>
+        <p>Place order with the manufacturer, confirm specifications, and oversee production of the robot palletizing arm to our requirements.</p>
       </div>
       <div class="timeline-item future fade-up delay-3">
         <div class="timeline-dot"></div>
         <div class="timeline-quarter">Q3 2026</div>
-        <h3>Testing &amp; Optimization</h3>
-        <p>Full throughput testing with all target bag types. Performance optimization to reach 400–600 bags/hour target. Safety certification process begins.</p>
+        <h3>Shipping &amp; Delivery</h3>
+        <p>International shipping, customs clearance, and delivery of the robot palletizing arm to our facility. Site preparation and infrastructure readiness.</p>
       </div>
       <div class="timeline-item future fade-up delay-4">
         <div class="timeline-dot"></div>
         <div class="timeline-quarter">Q4 2026</div>
-        <h3>First Customer Pilot</h3>
-        <p>Deploy machine at first customer facility. Collect real-world performance data, gather feedback, and finalize production-ready design revisions.</p>
+        <h3>Installation &amp; Commissioning</h3>
+        <p>Professional installation, electrical and mechanical integration, PLC programming, operator training, and initial test runs with all target bag types.</p>
       </div>
       <div class="timeline-item future fade-up delay-5">
         <div class="timeline-dot"></div>
         <div class="timeline-quarter">Q1 2027</div>
-        <h3>Commercial Launch</h3>
-        <p>Full commercial product launch. Begin sales and marketing across all five target industries. Establish distribution and service network.</p>
+        <h3>Full Operation &amp; Performance Review</h3>
+        <p>Full production operation across all shifts. Performance data collection, throughput verification, and grant outcome reporting.</p>
       </div>
-    </div>
-  </section>
-</div>
-
-<!-- ===== INVESTMENT ===== -->
-<div id="investment">
-  <section class="section-inner">
-    <span class="section-tag fade-up">Investment Opportunity</span>
-    <h2 class="section-title fade-up delay-1">Join Us</h2>
-    <div class="divider fade-up delay-1"></div>
-    <div class="investment-hero fade-up delay-2">
-      <p class="funding-label">Total Funding Round</p>
-      <div class="funding-amount">$20,000</div>
-      <p class="funding-label">USD · Pre-Seed / Concept Stage</p>
-    </div>
-    <div class="fund-grid">
-      <div class="fund-card fade-up delay-1">
-        <div class="pct">35%</div>
-        <div class="fund-label">Design &amp; Engineering</div>
-        <div class="fund-amount">$7,000</div>
-      </div>
-      <div class="fund-card fade-up delay-2">
-        <div class="pct">40%</div>
-        <div class="fund-label">Prototype Fabrication</div>
-        <div class="fund-amount">$8,000</div>
-      </div>
-      <div class="fund-card fade-up delay-3">
-        <div class="pct">15%</div>
-        <div class="fund-label">Testing &amp; Certification</div>
-        <div class="fund-amount">$3,000</div>
-      </div>
-      <div class="fund-card fade-up delay-4">
-        <div class="pct">10%</div>
-        <div class="fund-label">Marketing &amp; Sales</div>
-        <div class="fund-amount">$2,000</div>
-      </div>
-    </div>
-    <div class="roi-box fade-up delay-3">
-      <h3>Expected Return for Investors</h3>
-      <p>
-        With a target machine price of $15,000–25,000 per unit and an addressable market in the thousands
-        of facilities across Europe and emerging markets, even a modest market capture of 10 units
-        in Year 1 generates $150K–250K in revenue — representing a <strong>7–12× return</strong> on the initial
-        seed investment. Maintenance contracts add predictable recurring income from Year 2 onward.
-      </p>
     </div>
   </section>
 </div>
@@ -1155,15 +1173,15 @@
 <div id="contact">
   <section class="section-inner">
     <span class="section-tag fade-up">Get In Touch</span>
-    <h2 class="section-title fade-up delay-1">Interested in Investing?</h2>
+    <h2 class="section-title fade-up delay-1">Contact Us</h2>
     <div class="divider fade-up delay-1"></div>
     <div class="contact-card fade-up delay-2">
       <div class="contact-info">
-        <h2>Let's Build the Future of Industrial Automation Together</h2>
+        <h2>Let's Bring Automated Palletizing to Our Operations</h2>
         <p>
-          Rail-Company Srl is seeking visionary investors who see the opportunity in
-          practical, cost-effective industrial automation. We're at the beginning of something
-          significant — and we'd love to have you on board.
+          Rail-Company Srl is applying for grant funding to acquire an industrial robot palletizing arm.
+          We welcome questions from grant reviewers, potential partners, and anyone interested in our
+          automation plans.
         </p>
         <div class="contact-detail">
           <span>🏢</span>
@@ -1171,11 +1189,11 @@
         </div>
         <div class="contact-detail">
           <span>📍</span>
-          <span><strong>Stage:</strong> Concept / Pre-Seed</span>
+          <span><strong>Stage:</strong> Equipment Acquisition</span>
         </div>
         <div class="contact-detail">
           <span>💰</span>
-          <span><strong>Funding Ask:</strong> $20,000 USD</span>
+          <span><strong>Grant Request:</strong> $15,000 USD</span>
         </div>
         <div class="contact-detail">
           <span>📅</span>
@@ -1192,20 +1210,20 @@
           <input type="email" id="email" name="email" placeholder="your@email.com" required />
         </div>
         <div class="form-group">
-          <label for="interest">Investment Interest</label>
+          <label for="interest">Inquiry Type</label>
           <select id="interest" name="interest">
-            <option value="">Select your interest level</option>
-            <option value="exploring">Exploring the opportunity</option>
-            <option value="serious">Seriously considering</option>
-            <option value="ready">Ready to invest</option>
-            <option value="partner">Looking for partnership</option>
+            <option value="">Select inquiry type</option>
+            <option value="grant">Grant Reviewer</option>
+            <option value="equipment">Equipment Questions</option>
+            <option value="partner">Partnership Inquiry</option>
+            <option value="general">General Question</option>
           </select>
         </div>
         <div class="form-group">
           <label for="message">Message</label>
           <textarea id="message" name="message" placeholder="Tell us about yourself and your interest in this project..."></textarea>
         </div>
-        <button type="submit" class="form-submit">Send Enquiry →</button>
+        <button type="submit" class="form-submit">Send Message →</button>
         <p class="form-note">We'll respond within 1–2 business days</p>
       </form>
     </div>
@@ -1215,7 +1233,7 @@
 <!-- ===== FOOTER ===== -->
 <footer>
   <p>© 2026 <strong>Rail-Company Srl</strong> · Automated Bag Palletizing Solution · All rights reserved.</p>
-  <p style="margin-top:6px">Investor Presentation — Concept Stage</p>
+  <p style="margin-top:6px">Grant Application — Equipment Acquisition</p>
 </footer>
 
 <!-- ===== JAVASCRIPT ===== -->
@@ -1275,10 +1293,10 @@
   document.getElementById('contactForm').addEventListener('submit', function(e) {
     e.preventDefault();
     const btn = this.querySelector('.form-submit');
-    btn.textContent = '✓ Enquiry Sent!';
+    btn.textContent = '✓ Message Sent!';
     btn.style.background = '#2ecc71';
     setTimeout(() => {
-      btn.textContent = 'Send Enquiry →';
+      btn.textContent = 'Send Message →';
       btn.style.background = '';
       this.reset();
     }, 3000);
